@@ -1,0 +1,163 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f3f3f3;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: #2e3a59;
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+}
+
+input, select, button {
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  outline: none;
+}
+
+input:focus, select:focus {
+  border-color: #4caf50;
+}
+
+
+button {
+  cursor: pointer;
+  background: #4caf50;
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #43a047;
+}
+
+select option {
+  padding: 4px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.tabs button {
+  background-color: #e0e0e0;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid #ccc;
+  border-bottom: none;
+}
+
+.tabs button.active {
+  background-color: #ffffff;
+  font-weight: bold;
+  border-bottom: 2px solid #ffffff;
+}
+
+.tab-content {
+  border-top: 1px solid #ccc;
+  padding-top: 20px;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.component b {
+  flex: 1;
+}
+
+.valid {
+  color: green;
+}
+
+.invalid {
+  color: red;
+}
+
+
+.ore-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 300px;
+  padding: 15px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+}
+
+.ore-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.ore-input label {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.ore-input input {
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 1px solid #bbb;
+  border-radius: 5px;
+}
+
+.btn-calculate {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.btn-calculate:hover {
+  background-color: #45a049;
+}
+
+.ore-result {
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: #eef6ec;
+  padding: 10px;
+  border-radius: 8px;
+  border-left: 4px solid #4caf50;
+}

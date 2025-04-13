@@ -1,0 +1,177 @@
+:root {
+  --bg: #ffffff;
+  --container-bg: #f4f4f4;
+  --text: #1e1e1e;
+  --accent: #4caf50;
+  --accent-hover: #43a047;
+  --border: #ccc;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --tab-bg: #e0e0e0;
+  --tab-active: #d0d0d0;
+}
+
+body.dark {
+  --bg: #1e1e1e;
+  --container-bg: #2a2a2a;
+  --text: #f0f0f0;
+  --accent: #4caf50;
+  --accent-hover: #43a047;
+  --border: #444;
+  --input-bg: #333;
+  --input-border: #555;
+  --tab-bg: #3a3a3a;
+  --tab-active: #2a2a2a;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  transition: background 0.3s, color 0.3s;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  background: var(--container-bg);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  border-radius: 10px;
+}
+
+h1, h2 {
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+input, select, button {
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--input-border);
+  outline: none;
+  background-color: var(--input-bg);
+  color: var(--text);
+}
+
+input:focus, select:focus {
+  border-color: var(--accent);
+}
+
+button {
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  border: none;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: var(--accent-hover);
+}
+
+.tabs {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.tabs button {
+  background-color: var(--tab-bg);
+  color: var(--text);
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 5px 5px 0 0;
+  border: 1px solid var(--border);
+  border-bottom: none;
+}
+
+.tabs button.active {
+  background-color: var(--tab-active);
+  font-weight: bold;
+  border-bottom: 2px solid var(--tab-active);
+}
+
+.tab-content {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+}
+
+.component {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.component b {
+  flex: 1;
+}
+
+.valid {
+  color: #9ccc65;
+}
+
+.invalid {
+  color: #ef5350;
+}
+
+.ore-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.theme-toggle {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 15px;
+}
+
+#theme-toggle {
+  display: none;
+}
+
+.toggle-label {
+  width: 60px;
+  height: 30px;
+  background: var(--border);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 5px;
+  cursor: pointer;
+  position: relative;
+  transition: background 0.3s;
+}
+
+.toggle-label::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  width: 22px;
+  height: 22px;
+  background: var(--input-bg);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+
+#theme-toggle:checked + .toggle-label::before {
+  transform: translateX(30px);
+}
+
+.toggle-icon {
+  margin-left: auto;
+  margin-right: 5px;
+  font-size: 16px;
+  z-index: 1;
+  transition: color 0.3s;
+}

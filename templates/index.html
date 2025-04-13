@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Калькулятор сплавов</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <div class="header">
+      <h1>Калькулятор сплавов</h1>
+      <p>Версия 1.0.0</p>
+      </div>
+      <div class="theme-toggle">
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="toggle-label">
+          <span class="toggle-icon" id="theme-icon">☀️</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="tabs">
+      <button id="tab-btn-alloy" onclick="showTab('alloy')">
+        🧪 Калькулятор сплавов
+      </button>
+      <button id="tab-btn-ore" onclick="showTab('ore')">
+        🪨 Подсчёт слитков
+      </button>
+    </div>
+    <!-- Вкладка 1 -->
+    <div id="tab-alloy" class="tab-content">
+      <div class="container">
+        <h1>🧪 Калькулятор сплавов</h1>
+
+        <div class="section">
+          <label for="preset-select">Выбрать сплав:</label>
+          <select id="preset-select"></select>
+        </div>
+
+        <div class="section" id="components-container"></div>
+
+        <div class="section">
+          <button onclick="resetAll()">🔄 Сброс</button>
+        </div>
+
+        <div class="section" id="result"></div>
+
+        <hr />
+
+        <div class="section">
+          <h2>➕ Добавить свой рецепт</h2>
+          <input id="new-name" placeholder="Название сплава" />
+          <div id="custom-components"></div>
+          <button onclick="addCustomComponent()">Добавить компонент</button>
+          <button onclick="saveRecipe()">💾 Сохранить рецепт</button>
+          <button id="delete-btn" onclick="deleteCurrentRecipe()">
+            ❌ Удалить рецепт
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Вкладка 2 -->
+    <div class="container tab-content" id="tab-ore" style="display: none">
+      <h2>🪨 Подсчёт слитков из руды</h2>
+
+      <div class="ore-input">
+        <label>Бедная руда:</label>
+        <input id="ore-poor" type="number" min="0" placeholder="0" />
+      </div>
+      <div class="ore-input">
+        <label>Нормальная руда:</label>
+        <input id="ore-normal" type="number" min="0" placeholder="0" />
+      </div>
+      <div class="ore-input">
+        <label>Богатая руда:</label>
+        <input id="ore-rich" type="number" min="0" placeholder="0" />
+      </div>
+
+      <button onclick="calculateOre()">Рассчитать</button>
+
+      <div id="ore-result" class="section"></div>
+    </div>
+    <div class="floor"> 
+      <div class="description">
+        <p>
+          Этот калькулятор поможет вам рассчитать количество компонентов,
+          необходимых для создания различных сплавов. Вы можете выбрать
+          предустановленный рецепт или создать свой собственный.
+        </p>
+        <p>
+          Также доступна функция подсчёта слитков из руды. Просто введите
+          количество руды и нажмите кнопку "Рассчитать".
+        </p>
+        <p>
+          Примечание: Для корректной работы калькулятора необходимо включить
+          JavaScript.
+        </p>
+        <p>
+          Если у вас есть вопросы или предложения, пожалуйста, свяжитесь
+          <a href="https://t.me/HayoiOfficial">со мной</a>
+        </p>
+    </div>
+    <script src="/static/script.js"></script>
+  </body>
+</html>
