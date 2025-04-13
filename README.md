@@ -60,3 +60,4 @@ cd alloy-calculator
   ```bash
     python main.py
 ```
+🗂 Структура проекта
