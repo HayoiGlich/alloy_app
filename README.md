@@ -55,6 +55,8 @@
 ```bash
 git clone https://github.com/your_username/alloy-calculator.git
 cd alloy-calculator
+```
 2. Запуск
-  python main.py
-
+  ```bash
+    python main.py
+```
