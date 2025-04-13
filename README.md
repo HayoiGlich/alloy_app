@@ -57,7 +57,21 @@ git clone https://github.com/your_username/alloy-calculator.git
 cd alloy-calculator
 ```
 2. Запуск
-  ```bash
-    python main.py
+```bash
+python main.py
 ```
 🗂 Структура проекта
+```csharp
+  alloy-calculator/
+  │
+  ├── main.py                # FastAPI backend
+  ├── presets.py             # Системные рецепты
+  ├── user_recipes.json      # Хранилище пользовательских рецептов
+  │
+  ├── static/
+  │   ├── style.css          # Стили с поддержкой светлой/тёмной темы
+  │   └── script.js          # Вся логика интерфейса
+  │
+  └── templates/
+      └── index.html         # HTML-шаблон интерфейса
+```
